@@ -1,0 +1,28 @@
+---
+title: Artwork
+teaser: I occasionally make art
+bodyClass: mcg-artwork-page
+lazyLoad: true
+---
+{% extends 'layouts/base.njk' %}
+
+{% block main %}
+  <div class="mcg-wrapper mcg-wrapper--wider">
+    <h1 class="mcg-sr-only">{{ title }}</h1>
+    <p class="mcg-section-heading">{{ teaser | safe }}</p>
+  </div>
+  <div class="mcg-wrapper mcg-wrapper--full">
+    <ol class="mcg-grid">
+      {% for item in artwork %}
+      <li class="mcg-grid__item">
+        {% if item.external %}
+          <img class="lazyload" data-src="{{ item.url }}" alt="">
+        {% else %}
+          <img class="lazyload" data-src="../img/artwork/{{ item.url }}" alt="">
+        {% endif %}
+        <div class="mcg-caption">{{ item.title }}</div>
+      </li>
+      {% endfor %}
+    </ol>
+  </div>
+{% endblock %}

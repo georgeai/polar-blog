@@ -1,0 +1,33 @@
+---
+title: Posts
+teaser: Random thoughts about life
+bodyClass: mcg-posts-page
+---
+{% extends 'layouts/base.njk' %}
+{% from 'components/post-teaser.njk' import postTeaser %}
+
+{% block main %}
+  <div class="mcg-wrapper">
+    <h1 class="mcg-sr-only">{{ title }}</h1>
+    <p class="mcg-section-heading mcg-mb-none">{{ teaser | safe }}</p>
+  </div>
+  <div class="mcg-wrapper">
+    <ol class="mcg-feed-list">
+      {%- for post in collections.post | reverse -%}
+        {# This is a hacky workaround for "draft" functionality #}
+        {% if post.data.draft !== true %}
+        <li>
+          {{-
+            postTeaser({
+              title: post.data.title,
+              date: post.date,
+              url: post.url,
+              external_link: post.data.external_link
+            })
+          -}}
+        </li>
+        {% endif %}
+      {%- endfor -%}
+    </ol>
+  </div>
+{% endblock %}

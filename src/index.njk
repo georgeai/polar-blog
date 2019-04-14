@@ -1,0 +1,22 @@
+---
+title: polar
+bodyClass: mcg-home-page
+---
+{% extends 'layouts/base.njk' %}
+
+{% block main %}
+<div class="mcg-wrapper mcg-wrapper--shorter">
+  <div class="mcg-avatar">
+    <div class="mcg-avatar__wrap">
+      <img src="/img/headshot.png" alt="">
+    </div>
+  </div>
+  <h1 class="mcg-sr-only">{{ title }}</h1>
+  <p class="mcg-section-heading mcg-mb-md">{{ site.tagline }}</p>
+  <p>I'm Solar, a <a href="./artwork">sometimes artist</a> living in NYC.</p>
+  <p>When something happens in my life, or I read a good book I try to <a href="./posts">write about it here</a> 😊</p>
+
+  <h2 class="mcg-sub-heading mcg-mt-md">Latest posts</h2>
+  {% include 'components/recent-posts.njk' %}
+</div>
+{% endblock %}

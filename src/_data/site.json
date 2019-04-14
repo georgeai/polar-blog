@@ -1,0 +1,41 @@
+{
+  "title": "polar",
+  "tagline": "A kid wrote this",
+  "baseurl": "https://po.lar.nyc",
+  "artwork": "solar.soso.bio",
+  "navigation": [
+    {
+      "label": "Posts",
+      "url": "/posts/"
+    },
+    {
+      "label": "Artwork",
+      "url": "/artwork/"
+    },
+    {
+      "label": "Bookshelf",
+      "url": "/bookshelf/"
+    }
+  ],
+  "links": [
+    {
+      "title": "Twitter",
+      "url": "https://twitter.com//",
+      "me": true
+    },
+    {
+      "title": "Instagram",
+      "url": "https://www.instagram.com//",
+      "me": true
+    },
+    {
+      "title": "GitHub",
+      "url": "https://github.com//",
+      "me": true
+    },
+    {
+      "title": "RSS",
+      "url": "/feed.xml"
+    }
+  ]
+}

@@ -1,0 +1,15 @@
+{% extends 'layouts/base.njk' %}
+
+{% block main %}
+  <article class="mcg-wrapper h-entry">
+    {% include 'components/post-header.njk' %}
+    <div class="mcg-longform">
+      {{ content | safe }}
+    </div>
+    {% if footnote %}
+    <div class="mcg-footnotes">
+      {{ footnote | safe }}
+    </div>
+    {% endif %}
+  </article>
+{% endblock %}
