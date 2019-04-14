@@ -4,7 +4,7 @@ date: 2019-04-13
 tags:
   - post
 ---
-Solar would be a great universal designer one day.
+I am a universal designer.
 
 [Massimo Vignelli](https://en.wikipedia.org/wiki/Massimo_Vignelli) said this:
 
